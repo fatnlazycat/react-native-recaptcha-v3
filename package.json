@@ -1,6 +1,6 @@
 {
-  "name": "react-native-recaptcha-v3",
-  "version": "0.0.14",
+  "name": "@fatnlazycat/react-native-recaptcha-v3",
+  "version": "0.0.1",
   "description": "A react native wrapper for Google ReCaptcha V3",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acsant/react-native-recaptcha.git"
+    "url": "git+https://github.com/fatnlazycat/react-native-recaptcha-v3.git"
   },
   "keywords": [
     "react",
