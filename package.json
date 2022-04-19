@@ -1,7 +1,7 @@
 {
   "name": "@fatnlazycat/react-native-recaptcha-v3",
   "version": "0.0.1",
-  "description": "A react native wrapper for Google ReCaptcha V3",
+  "description": "A react native wrapper for Google ReCaptcha V3, fork from acsant/react-native-recaptcha",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,8 +23,9 @@
   "author": "Akash Sant",
   "license": "ISC",
   "dependencies": {
+    "merge": ">=1.2.1",
     "prop-types": "^15.6.1",
-    "merge": ">=1.2.1"
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
     "react-native": "*"
