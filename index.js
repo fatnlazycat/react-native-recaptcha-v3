@@ -17,7 +17,7 @@ const getInvisibleRecaptchaContent = (siteKey, action, onReady) => {
     `try {` +
     // `window.ReactNativeWebView.postMessage('captchaDebug start');` +
     'let a = await grecaptcha.execute(\'' + siteKey + '\', {action: \'' + action + '\'});' +
-    // `window.ReactNativeWebView.postMessage(a);` +
+    `window.ReactNativeWebView.postMessage(a);` +
     `} catch(err) {  window.ReactNativeWebView.postMessage(err);  }` +
         // `window.ReactNativeWebView.postMessage('captchaDebug' + '${siteKey}');` +
         // `(${String(onReady)})(); ` +
