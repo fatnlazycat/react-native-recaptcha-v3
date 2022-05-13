@@ -13,7 +13,7 @@ const getInvisibleRecaptchaContent = (siteKey, action, onReady) => {
     '<style>  .text-xs-center { text-align: center; } .g-recaptcha { display: inline-block; } </style> ' +
     '<script src="https://www.google.com/recaptcha/api.js?render=' + siteKey + '"></script> ' +
     '<script type="text/javascript"> ' +
-    'grecaptcha.ready(function() { ' +
+    'grecaptcha.ready(async function() { ' +
     `try {` +
     // `window.ReactNativeWebView.postMessage('captchaDebug start');` +
     'let a = await grecaptcha.execute(\'' + siteKey + '\', {action: \'' + action + '\'});' +
