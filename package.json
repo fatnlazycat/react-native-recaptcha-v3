@@ -1,6 +1,6 @@
 {
   "name": "@fatnlazycat/react-native-recaptcha-v3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react native wrapper for Google ReCaptcha V3, fork from acsant/react-native-recaptcha",
   "main": "index.js",
   "scripts": {
