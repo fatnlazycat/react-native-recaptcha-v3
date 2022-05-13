@@ -14,10 +14,17 @@ const getInvisibleRecaptchaContent = (siteKey, action, onReady) => {
     '<script src="https://www.google.com/recaptcha/api.js?render=' + siteKey + '"></script> ' +
     '<script type="text/javascript"> ' +
     'grecaptcha.ready(function() { ' +
-        `(${String(onReady)})(); ` +
-        'grecaptcha.execute(\'' + siteKey + '\', {action: \'' + action + '\'}).then( '+
-            'function (responseToken) { window.ReactNativeWebView.postMessage(responseToken);  } ' +
-        ' ); ' +
+    `try {` +
+    // `window.ReactNativeWebView.postMessage('captchaDebug start');` +
+    'let a = await grecaptcha.execute(\'' + siteKey + '\', {action: \'' + action + '\'});' +
+    // `window.ReactNativeWebView.postMessage(a);` +
+    `} catch(err) {  window.ReactNativeWebView.postMessage(err);  }` +
+        // `window.ReactNativeWebView.postMessage('captchaDebug' + '${siteKey}');` +
+        // `(${String(onReady)})(); ` +
+        // 'grecaptcha.execute(\'' + siteKey + '\', {action: \'' + action + '\'}).then( '+
+        //     'function (responseToken) { window.ReactNativeWebView.postMessage(responseToken);  }, ' +
+        //     `function (err) {  window.ReactNativeWebView.postMessage(err);  }` +
+        // ' ); ' +
     '}); ' +
     '</script>' +
     '</head></html>';
